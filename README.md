@@ -4,7 +4,7 @@
 
 Create environment:
 
-    conda env create --file environment.yaml
+    conda env create --file environment.yml
     conda activate spam
 
 Train spam classifier model:
