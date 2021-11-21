@@ -1,0 +1,13 @@
+# Spam Detection with SciKit-Learn, FastAPI on Docker
+
+## Setup
+
+Create environment:
+
+    conda env create --file environment.yaml
+    conda activate spam
+
+Train spam classifier model:
+
+    pyhon train.py
+
