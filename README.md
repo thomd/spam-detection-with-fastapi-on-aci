@@ -9,12 +9,13 @@ set of SMS labeled messages that have been collected for mobile phone spam resea
 
 Create environment:
 
-    PIP_REQUIRE_VIRTUALENV=false conda env create --file environment.yml
+    conda create --name spam
     conda activate spam
+    conda install --yes --file requirements.txt
 
 Train spam classifier model:
 
-    pyhon train.py
+    python train.py
 
 For local testing, start server with
 
