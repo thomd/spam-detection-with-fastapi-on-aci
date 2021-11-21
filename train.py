@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import re
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression
@@ -9,17 +8,11 @@ from sklearn.metrics import accuracy_score, classification_report
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import cross_val_score
 from joblib import dump
-
-
-def preprocessor(text):
-    text = re.sub("<[^>]*>", "", text)
-    emoticons = re.findall("(?::|;|=)(?:-)?(?:\)|\(|D|P)", text)
-    text = re.sub("[\W]+", " ", text.lower()) + " ".join(emoticons).replace("-", "")
-    return text
+import texthelper as th
 
 
 dataset = pd.read_csv("./data/spam.csv")
-X = dataset["Message"].apply(preprocessor)
+X = dataset["Message"].apply(th.preprocessor)
 y = dataset["Category"]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
