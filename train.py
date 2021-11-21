@@ -21,8 +21,8 @@ vectorizer = TfidfVectorizer(strip_accents=None, lowercase=False, max_features=7
 pipeline = Pipeline([("vectorizer", vectorizer), ("nn", MLPClassifier(hidden_layer_sizes=(700, 700)))])
 pipeline.fit(X_train, y_train)
 
-y_pred = pipeline.predict(X_test)
-print(classification_report(y_test, y_pred))
-print(f"Accuracy: {100 * accuracy_score(y_test, y_pred)} %")
+prediction = pipeline.predict(X_test)
+print(classification_report(y_test, prediction))
+print(f"Accuracy: {100 * accuracy_score(y_test, prediction)} %")
 
 dump(pipeline, "./model/spam-classifier.joblib")
