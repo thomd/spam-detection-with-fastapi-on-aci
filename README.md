@@ -1,4 +1,4 @@
-# Spam Detection with SciKit-Learn, FastAPI on Docker
+# Spam Detection with SKLearn, FastAPI on Azure Container Instance
 
 ## Setup
 
@@ -30,7 +30,7 @@ Build docker image and run docker container:
     docker build -t spam-detection .
     docker run -d --rm --name spam -p 80:80 spam-detection
 
-Deploy as Azure Container Instance
+## Deploy as Azure Container Instance
 
     az group create -n <group> -l <location>
     az acr create -g <group> -n <registry> --sku Basic --admin-enabled true
