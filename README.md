@@ -1,10 +1,13 @@
 # Spam Detection with SKLearn, FastAPI on Azure Container Instance
 
+The UCI [SMS Spam Collection](https://data.world/uci/sms-spam-collection) is a public
+set of SMS labeled messages that have been collected for mobile phone spam research.
+
 ## Setup
 
 Create environment:
 
-    conda env create --file environment.yml
+    PIP_REQUIRE_VIRTUALENV=false conda env create --file environment.yml
     conda activate spam
 
 Train spam classifier model:
