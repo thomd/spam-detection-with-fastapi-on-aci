@@ -50,3 +50,5 @@ Build docker image and run docker container:
     az container logs -g <group> -n <container>
 
     open http://<label>.<location>.azurecontainer.io
+
+    az group delete -n <group>
