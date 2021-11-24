@@ -1,4 +1,4 @@
-# Spam Detection with SKLearn, FastAPI on Azure Container Instance
+# Spam Detection with SciKit-Learn, FastAPI on Azure Container Instance
 
 ## Dataset
 
